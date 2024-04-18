@@ -58,6 +58,7 @@ const Profile = () => {
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         setFilePerc(Math.round(progress));
       },
+      // eslint-disable-next-line no-unused-vars
       (error) => {
         setFileUploadError(true);
       },
@@ -267,7 +268,7 @@ const Profile = () => {
                 <p>{listing.name}</p>
               </Link>
 
-              <div className="flex flex-col item-center">
+              <div className="flex flex-col items-center">
                 <button onClick={() => handleListingDelete(listing._id)} className="text-red-700">Delete</button>
                 <button className="text-green-700">Edit</button>
               </div>
